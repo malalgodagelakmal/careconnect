@@ -17,6 +17,8 @@ Appointment.sequelize.sync().then(() => {
 
 
 app.get('/appointments', async (req, res) => {
+
+    console.log("Get appointments hit =============");
     try {
         const { upcoming, email } = req.query;
         let whereCondition = {};
@@ -49,6 +51,8 @@ app.get('/appointments', async (req, res) => {
 });
 
 app.get('/appointments/:id', async (req, res) => {
+
+    console.log("Get appointments with ID hit =============");
     const { id } = req.params;
 
     try {
@@ -67,6 +71,9 @@ app.get('/appointments/:id', async (req, res) => {
 
 // Booking endpoint
 app.post('/appointments', async (req, res) => {
+
+    console.log("Post appointments hit =============");
+    console.log(req.body);
     try {
         const { name, service, phoneNumber, email, appointmentDate } = req.body;
         const newAppointment = await Appointment.create({ name, service, phoneNumber, email, appointmentDate });
