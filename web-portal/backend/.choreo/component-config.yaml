@@ -22,8 +22,8 @@ spec:
       schemaFilePath: openapi.yaml
   outbound:
     serviceReferences:
-    - name: choreo:///malakmal/backend/inqscv/8b1c3/v1.0/ORGANIZATION
-      connectionConfig: 01eef7c5-d89f-14ae-8940-9b4aab2985c1
+    - name: choreo:///malakmal/backend/hxzkpw/8b1c3/v1.0/ORGANIZATION
+      connectionConfig: 01eeff39-681c-1ca6-9f21-27cb05cb502c
       env:
       - from: ServiceURL
         to: APPOINTMENT_SERVICE_URL
